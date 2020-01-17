@@ -31,6 +31,7 @@ class Game
         return winner
         end 
        end 
+       return false 
    end 
     
     def draw?
