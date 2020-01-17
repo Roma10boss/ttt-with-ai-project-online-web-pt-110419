@@ -31,7 +31,7 @@ class Game
         return winning_combo
         end 
        end 
-       return false 
+        
    end 
     
     def draw?
