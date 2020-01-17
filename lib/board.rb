@@ -33,5 +33,6 @@ class Board
   
   def turn_count
     cells.count{|char| char =="X" || char="O"
+  end 
   
 end 
