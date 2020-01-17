@@ -16,6 +16,9 @@ class Game
       @board = board
       @player_1 = player_1
       @player_2 = player_2
-      
+    end 
+    
+    def current_player
+      @board.turn_count % 2 == 0 ? playe_1 : player_2
     end 
 end 
