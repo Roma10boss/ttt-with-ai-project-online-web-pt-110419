@@ -41,7 +41,10 @@ class Board
   
   def valid_move?(input)
     input.to_i.between?(1, 9) && !taken?(input)
-    
+  end 
+  
+  def update(update, player)
+    cells[input.to_i-1] = player.taken
   end 
   
 end 
