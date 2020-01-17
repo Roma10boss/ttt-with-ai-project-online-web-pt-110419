@@ -32,7 +32,7 @@ class Board
   end 
   
   def turn_count
-    cells.count{|char| char =="X" || char="O"}
+    cells.count{|char| char =="X" || char=="O"}
   end 
   
 end 
