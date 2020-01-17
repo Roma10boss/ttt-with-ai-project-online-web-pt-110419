@@ -44,7 +44,7 @@ class Board
   end 
   
   def update(update, player)
-    cells[input.to_i-1] = player.taken
+    cells[position.to_i-1] = player.taken
   end 
   
 end 
