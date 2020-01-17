@@ -1,5 +1,5 @@
 class Game 
-  attr_accessor :board, :player_1, :player_2
+  attr_accessor :board, :player_1, :player_2, :winner
   
   WIN_COMBINATIONS =[
     [0,1,2],
@@ -22,10 +22,6 @@ class Game
       @board.turn_count % 2 == 0 ? player_1 : player_2
     end 
     
-    def over?
-      won? || draw?
-    end 
-    
     def won?
       WIN_COMBINATIONS.detect do |winner|
         @board.cells[winner[0]] == @board.cells[winner[1]] && 
@@ -35,5 +31,15 @@ class Game
     
     def draw?
       @board.full? && !won?
+    end 
+    
+    def over?
+      won? || draw?
+    end 
+    
+    def winner 
+      if winning_combo = won? 
+        @winner = @board.cells[winning_combo.first]
+      end
     end 
 end 
