@@ -29,7 +29,8 @@ class Game
     def won?
       WIN_COMBINATIONS.detect do |winner|
         @board.cells[winner[0]]
-    end 
+       end 
+   end 
     
     def draw?
       @board.full? && !won?
