@@ -36,16 +36,18 @@ class Game
    end 
     
     def draw?
-      @board.full? && !won? ? true : false
-    end 
-    
-    def over?
-      won? || draw?
-    end 
-    
-    def winner 
-      if winning_combo = won? 
-        @winner = @board.cells[winning_combo.first]
-      end
-    end 
+    @board.full? && !won? ? true : false
+  end
+
+  def over?
+     (won? || draw?) ? true : false
+     # IF board is not full, game is in progress (FALSE), ELSE, game is over (TRUE)
+  end
+
+  def winner
+    if won?
+      combination = won?
+      @board.cells[combination[0]] # X or O
+    end
+  end
 end 
