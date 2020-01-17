@@ -31,4 +31,7 @@ class Board
     end 
   end 
   
+  def turn_count
+    cells.count{|char| char =="X" || char="O"
+  
 end 
