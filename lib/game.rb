@@ -1,5 +1,5 @@
 class Game 
-  attr_accessor :board, :player_1
+  attr_accessor :board, :player_1, :player_2
   
   WIN_COMBINATIONS =[
     [0,1,2],
@@ -11,4 +11,8 @@ class Game
     [0,4,8],
     [2,4,6]
     ]
+    
+    def initializ(player_1,player_2,board)
+      
+    end 
 end 
