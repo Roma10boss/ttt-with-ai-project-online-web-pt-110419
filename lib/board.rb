@@ -21,4 +21,8 @@ class Board
     cells[input.to_i-1]
   end 
   
+  def full
+    cells.all?{|character| character == "X" || character == "O"}
+  end 
+  
 end 
