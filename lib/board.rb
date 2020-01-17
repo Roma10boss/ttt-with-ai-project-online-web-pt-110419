@@ -36,7 +36,7 @@ class Board
   end 
   
   def taken?(input)
-    position(input) == "X" || position == "O"
+    !(position(input) == " " || position == " ")
   end 
   
 end 
