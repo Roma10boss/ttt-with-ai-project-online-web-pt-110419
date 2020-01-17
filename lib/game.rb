@@ -9,4 +9,5 @@ class Game
     [048],
     [246]
     ]
+  end 
 end 
